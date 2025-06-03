@@ -24,13 +24,14 @@ import PrivateRoute from './routes/PrivateRoute'
 function App() {
   return (
     <Routes>
+      {/* Rutas públicas: NO envueltas por DataLoader ni MainLayout */}
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+      <Route path="/register/:id" element={<RegisterPage />} />
+
+      {/* Rutas privadas: envueltas por DataLoader y MainLayout */}
       <Route element={<DataLoader />}>
         <Route element={<MainLayout />}>
-          {/* Rutas públicas */}
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/register/:id" element={<RegisterPage />} />
-          {/* Rutas protegidas */}
           <Route path="/usuarios" element={<PrivateRoute><UsersListPage /></PrivateRoute>} />
           <Route path="/portfolio" element={<PrivateRoute><Portfolio /></PrivateRoute>} />
           <Route path="/add" element={<PrivateRoute><AddAssetPage /></PrivateRoute>} />
