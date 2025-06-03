@@ -2,9 +2,8 @@
     flex-grow: 1;
     overflow-y: auto;
     padding-bottom: 50px; /* espacio para que el scroll no corte el footer */
-    
     border-radius: 10px;
-    
+    ;
   }
 
   .empty-assets {
