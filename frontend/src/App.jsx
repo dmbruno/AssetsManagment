@@ -29,6 +29,8 @@ function App() {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/register/:id" element={<RegisterPage />} />
+      {/* Redirección condicional en la raíz (fuera del layout privado) */}
+      <Route path="/" element={<AuthRedirect />} />
 
       {/* Rutas privadas: envueltas por DataLoader y MainLayout */}
       <Route element={<DataLoader />}>
@@ -44,8 +46,6 @@ function App() {
           <Route path="/assets/:id/add" element={<PrivateRoute><AddTransactionPage /></PrivateRoute>} />
           <Route path="/transactions" element={<PrivateRoute><GlobalTransactionHistoryPage /></PrivateRoute>} />
           <Route path="/transactions/:id/edit" element={<PrivateRoute><EditTransactionPage /></PrivateRoute>} />
-          {/* Redirección condicional en la raíz */}
-          <Route path="/" element={<AuthRedirect />} />
         </Route>
       </Route>
     </Routes>
