@@ -2,7 +2,7 @@
 import { authFetch } from '../../app/api';
 
 export async function fetchUsers() {
-    const response = await authFetch('http://localhost:5001/usuarios')
+    const response = await authFetch('/usuarios')
     if (!response.ok) {
       throw new Error('Error al obtener usuarios')
     }

@@ -2,8 +2,8 @@ import { authFetch } from '../../app/api';
 
 export async function fetchAssets(userId) {
   const [assetsRes, txRes] = await Promise.all([
-    authFetch(`http://localhost:5001/activos?user_id=${userId}`),
-    authFetch(`http://localhost:5001/transacciones?user_id=${userId}`)
+    authFetch(`/activos?user_id=${userId}`),
+    authFetch(`/transacciones?user_id=${userId}`)
   ]);
 
   if (!assetsRes.ok || !txRes.ok) {
@@ -32,7 +32,6 @@ export async function fetchAssets(userId) {
         totalQty -= qty;
       }
     });
-
     const avgPurchasePrice = totalQty > 0 ? totalCost / totalQty : 0;
 
     return {

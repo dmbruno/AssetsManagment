@@ -12,7 +12,7 @@ const UserListPage = () => {
   const [usuarios, setUsuarios] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5001/usuarios')
+    fetch('/usuarios')
       .then(res => res.json())
       .then(data => setUsuarios(data))
       .catch(err => console.error('Error:', err));
@@ -27,7 +27,7 @@ const UserListPage = () => {
     if (!confirm) return;
 
     try {
-      const res = await fetch(`http://localhost:5001/usuarios/${id}`, {
+      const res = await fetch(`/usuarios/${id}`, {
         method: 'DELETE'
       });
       if (res.ok) {

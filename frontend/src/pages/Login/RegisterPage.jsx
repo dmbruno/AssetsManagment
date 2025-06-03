@@ -26,7 +26,7 @@ const RegisterPage = () => {
   // ⚡ Cargar datos si está en modo edición
   useEffect(() => {
     if (id) {
-      authFetch(`http://localhost:5001/usuarios/${id}`)
+      authFetch(`/usuarios/${id}`)
         .then(res => res.json())
         .then(data => setFormValues(data))
         .catch(err => console.error('Error cargando usuario:', err));
@@ -51,8 +51,8 @@ const RegisterPage = () => {
     }
   
     const endpoint = isEditMode
-      ? `http://localhost:5001/usuarios/${id}`
-      : `http://localhost:5001/usuarios`;
+      ? `/usuarios/${id}`
+      : `/usuarios`;
   
     const method = isEditMode ? "PUT" : "POST";
   
