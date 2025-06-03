@@ -3,52 +3,52 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 64px;
+  height: 58px;
+  background: rgba(255, 255, 255, 0.85);
+  border-top: 1px solid #e5e7eb;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  
-  border-top: 1px solid #e5e7eb;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+  padding: 0 0.75rem;
   z-index: 1000;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
-.footer span {
-  font-size: 13px;
-  margin-top: 2px;
-  font-weight: 800;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-
-}
-
+/* Botón base */
 .nav-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-decoration: none;
+  font-size: 0.65rem;
   color: #6b7280;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  transition: color 0.2s ease;
-  
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .nav-item svg {
-  font-size: 20px;
+  font-size: 1.2rem;
   margin-bottom: 2px;
-  stroke: currentColor;
-  transition: stroke 0.2s ease;
-  
+  color: inherit;
+  transition: transform 0.2s ease;
 }
 
+/* Estado activo */
 .nav-item.active {
-  color: #4251f5;
-  /* azul principal */
+  color: #3b3bff;
   font-weight: 600;
 }
 
 .nav-item.active svg {
-  color: #4251f5;
-  stroke: #4251f5;
+  color: #3b3bff;
+  transform: scale(1.1);
+}
+
+/* Feedback táctil */
+.nav-item:active {
+  background-color: rgba(59, 91, 255, 0.05);
 }

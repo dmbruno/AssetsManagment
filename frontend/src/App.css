@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background: linear-gradient(to bottom, #ffffff, #e0f2ff);
+  background: linear-gradient(to top, #2e3032, #c3d6ee);
   min-height: 100vh;
   margin: 0;
   padding: 0;

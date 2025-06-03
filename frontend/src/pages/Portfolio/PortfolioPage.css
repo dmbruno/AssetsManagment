@@ -1,35 +1,43 @@
+/* ======== Contenedor principal ======== */
+.portfolio-container {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
 
-
+/* ======== Header usuario ======== */
 .portfolio-header-fixed {
   flex-shrink: 0;
   z-index: 2;
-  padding: 1rem
+  padding: 0.75rem 1rem 0;
 }
 
 .portfolio-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
-  
+  margin-bottom: 0.5rem;
 }
 
 .portfolio-user-info h2 {
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-size: 1.1rem;
   font-weight: 600;
-  margin: 0;
   color: #111827;
+  margin: 0;
 }
 
 .portfolio-user-info p {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: #6b7280;
   margin: 0.25rem 0 0;
 }
 
 .portfolio-actions {
   display: flex;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .portfolio-actions button {
@@ -37,88 +45,123 @@
   border: none;
   cursor: pointer;
   color: #374151;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease;
 }
 
 .portfolio-actions button:hover {
   color: #2563eb;
-  transform: scale(1.15);
 }
 
-.portfolio-container {
-  background: transparent;
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
-  
-}
-
-/* Cards blancas con sombra suave para contraste */
-.portfolio-scrollable-list {
-  flex-grow: 1;
-  overflow-y: auto;
-  padding: .5rem;
-}
-
-.asset-card {
+/* ======== Summary box ======== */
+.summary-card {
   background-color: #ffffff;
+  padding: 0.75rem 1rem;
   border-radius: 0.75rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1rem;
+}
+
+.summary-card h2 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.summary-card .total-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.25rem 0;
+}
+
+.summary-card .change {
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+
+.summary-card .breakdown {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+/* ======== Input de búsqueda ======== */
+.asset-filters input[type="search"] {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ======== Botones de filtro ======== */
+.asset-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
   margin-bottom: 1rem;
 }
 
 .asset-filter-button {
-  flex: 1 1 40%;
-  max-width: 140px;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.9rem;
+  padding: 0.4rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid #d1d5db;
-  background-color: #ffffff;
-  color: #374151;
+  font-size: 0.8rem;
   font-weight: 500;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-  transition: all 0.2s ease-in-out;
-  text-align: center;
+  border: none;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  transition: background 0.2s;
 }
 
-
-.asset-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  margin: 1rem 0;
-}
-
-
-.asset-filters-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-
-.asset-filter-button:hover,
 .asset-filter-button.active {
-  background: linear-gradient(to right, #e0f2ff, #dbeafe);
-  border-color: #60a5fa;
-  color: #1d4ed8;
-  transform: scale(1.03);
+  background-color: #2563eb;
+  color: white;
 }
 
-.asset-filters input[type="search"] {
-  width: 100%;
-  max-width: 500px;
-  padding: 0.75rem;
-  margin: 0 auto 1rem;
-  border-radius: 0.75rem;
-  border: 1px solid #d1d5db;
-  background: #ffffff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-  font-size: 1rem;
+.asset-filter-button:hover {
+  background-color: #dbeafe;
+}
+
+/* ======== Cards de activos ======== */
+.portfolio-scrollable-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0 1rem 5rem 1rem;
+
+}
+
+.asset-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.asset-card h3 {
+  font-size: 0.95rem;
+  margin: 0 0 0.25rem;
+}
+
+.asset-card p {
+  font-size: 0.75rem;
+  color: #4b5563;
+  margin: 0 0 0.25rem;
+}
+
+.asset-card .tag {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #1e3a8a;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  float: right;
 }

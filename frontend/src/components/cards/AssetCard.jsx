@@ -2,6 +2,8 @@
 import React from "react";
 import "./AssetCard.css"; // Assuming you have a CSS file for styling
 import { Link } from 'react-router-dom';
+import { FiArrowUpRight } from "react-icons/fi";
+
 
 const AssetCard = ({ id, name, symbol, type, currentValue, quantity, purchasePrice }) => {
   const typeColorClass = {
@@ -19,6 +21,8 @@ const AssetCard = ({ id, name, symbol, type, currentValue, quantity, purchasePri
             <p className="asset-name">{name}</p>
           </div>
           <span className={`type-badge ${typeColorClass}`}>{type}</span>
+          <FiArrowUpRight className="tap-icon" />
+          
         </div>
 
         <div className="asset-details">

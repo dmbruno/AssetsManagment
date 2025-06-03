@@ -3,7 +3,6 @@ import { FiPieChart, FiPlusCircle } from "react-icons/fi";
 import { FaExchangeAlt } from "react-icons/fa";
 import "./FooterNav.css";
 
-
 const FooterNav = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -16,29 +15,27 @@ const FooterNav = () => {
     window.dispatchEvent(new CustomEvent("startTransactionsNavigation"));
   };
 
-  const isActive = (path) => location.pathname === path;
-
   const handlePortfolioClick = () => {
     window.dispatchEvent(new CustomEvent("startPortfolioNavigation"));
   };
 
+  const isActive = (path) => location.pathname === path;
 
   return (
     <footer className="footer">
       <button onClick={handlePortfolioClick} className={`nav-item ${isActive("/portfolio") ? "active" : ""}`}>
-        <FiPieChart size={20} />
+        <FiPieChart />
         <span>Portfolio</span>
       </button>
 
-
       <button onClick={handleAddClick} className={`nav-item ${isActive("/add") ? "active" : ""}`}>
-        <FiPlusCircle size={20} />
-        <span>Add Asset</span>
+        <FiPlusCircle />
+        <span>Add</span>
       </button>
 
       <button onClick={handleTransactionsClick} className={`nav-item ${isActive("/transactions") ? "active" : ""}`}>
-        <FaExchangeAlt size={20} />
-        <span>Transactions</span>
+        <FaExchangeAlt />
+        <span>Movements</span>
       </button>
     </footer>
   );

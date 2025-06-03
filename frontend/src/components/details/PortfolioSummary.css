@@ -1,71 +1,107 @@
+/* === Portfolio Summary Card === */
 .portfolio-summary {
-    background: #f3f3f3;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 1rem 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid rgba(229, 231, 235, 0.6);
 }
 
+/* === Header === */
 .summary-header {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 600;
-    padding-top: 5px;
-    padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #111827;
+}
+
+.summary-header h2 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.summary-header span {
+  font-size: 0.65rem;
+  color: #6b7280;
+}
+
+/* === Valor total === */
+.total-value p {
+  margin-top: 5px;
+  font-size: 0.7rem;
+  color: #6b7280;
+}
+
+.total-value h1 {
+  font-size: 1.5rem;
+  
+  font-weight: 700;
+  color: #111827;
+}
+
+/* === Cambio porcentaje === */
+.conteiner-change {
+  margin-top: 0.2rem;
+}
+
+.change {
+  font-weight: 500;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .change.positive {
-    color: green;
+  background: linear-gradient(to right, #dcfce7, #bbf7d0);
+  color: #166534;
 }
 
 .change.negative {
-    color: red;
+  background: linear-gradient(to right, #fee2e2, #fecaca);
+  color: #991b1b;
 }
 
-
-.total-value h1 {
-    font-size: 2rem;
-    margin: 0;
-    padding-top: 5px;
-}
-
-.conteiner-change {
-    padding-top: 10px;
-}
-
-
-.change.positive {
-    color: green;
-    font-weight: 500;
-    font-size: 0.9rem;
-    background: #dfffe1;
-    padding: 0.25rem 0.5rem;
-    border-radius: 8px;
-}
-
+/* === Distribución === */
 .distribution {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #4b5563;
+  margin-top: 0.4rem;
 }
 
+.distribution div {
+  display: flex;
+  align-items: center;
+}
+
+/* === Puntos de color === */
 .dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-right: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  margin-right: 5px;
+  display: inline-block;
 }
 
 .stock {
-    background-color: #3b82f6;
+  background-color: #2563eb;
 }
 
 .bond {
-    background-color: #10b981;
+  background-color: #059669;
 }
 
 .crypto {
-    background-color: #8b5cf6;
+  background-color: #8b5cf6;
 }

@@ -15,7 +15,9 @@ const AssetsList = ({ assets = [] }) => {
   return (
     <div className="asset-list" style={{ marginBottom: "20px" }}>
       {assets.map((asset) => (
-        <AssetCard key={asset.id} {...asset} />
+        <div className="asset-fade" key={asset.id}>
+          <AssetCard {...asset} />
+        </div>
       ))}
     </div>
   );
