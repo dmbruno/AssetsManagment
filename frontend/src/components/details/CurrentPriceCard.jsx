@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { loadAssets } from '../../features/assets/assetsSlice';
 import './CurrentPriceCard.css';
-import { authFetch } from '../../utils/authFetch'; // Asegúrate de que la ruta sea correcta
+import { authFetch } from '../../app/api';
 
 const CurrentPriceCard = ({ assetId, currentPrice }) => {
   const [price, setPrice] = useState(currentPrice);

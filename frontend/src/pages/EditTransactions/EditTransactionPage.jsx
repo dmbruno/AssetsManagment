@@ -8,7 +8,7 @@ import CancelButton from "../../components/buttons/CancelButton";
 import AssetTopBar from "../../components/layout/AssetTopBar";
 import { loadAssets } from "../../features/assets/assetsSlice";
 import { loadTransactions } from "../../features/transactions/transactionsSlice";
-import { authFetch } from "../../utils/authFetch"; // Asegúrate de importar authFetch
+import { authFetch } from '../../app/api';
 
 const EditTransactionPage = () => {
     const { id } = useParams(); // id de la transacción

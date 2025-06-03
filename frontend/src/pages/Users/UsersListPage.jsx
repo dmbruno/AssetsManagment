@@ -3,7 +3,7 @@ import { FaEdit, FaTrash } from 'react-icons/fa';
 import './UsersListPage.css';
 import PageTopBar from '../../components/layout/PageTopBar';
 import { useNavigate } from 'react-router-dom';
-import { authFetch } from '../../utils/authFetch'; // Asegúrate de que la ruta sea correcta
+import { authFetch } from '../../app/api'; // Asegúrate de que la ruta sea correcta
 
 
 const UserListPage = () => {
