@@ -5,7 +5,9 @@ app = create_app()
 
 with app.app_context():
     # Mostrar todas las tablas
-    tables = db.engine.table_names() if hasattr(db.engine, 'table_names') else db.engine.table_names()
+    from sqlalchemy import inspect
+    inspector = inspect(db.engine)
+    tables = inspector.get_table_names()
     print("Tablas en la base de datos:", tables)
 
     # Mostrar todos los usuarios
