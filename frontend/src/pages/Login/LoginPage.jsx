@@ -21,7 +21,9 @@ const LoginPage = () => {
         setError(null);
 
         try {
-            const response = await fetch('/login', {
+            // Usa la API base para producción
+            const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+            const response = await fetch(`${baseUrl}/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
