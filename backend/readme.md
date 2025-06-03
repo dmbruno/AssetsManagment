@@ -158,12 +158,18 @@ with app.app_context():
 - [x] Eliminación en cascada verificada  
 - [x] API lista para frontend
 
+---
 
+## 🔒 Autenticación y protección de rutas (JWT)
 
+- El login (`/login`) genera un token JWT firmado con una clave secreta (`SECRET_KEY` del archivo `.env`).
+- El token incluye el `user_id` y una expiración.
+- El frontend debe enviar el token en el header `Authorization: Bearer <token>` en cada request protegida.
+- Todas las rutas sensibles (usuarios, activos, transacciones) están protegidas con un decorador que valida el JWT.
+- Si el token es inválido o expiró, la API responde 401.
+- Las peticiones preflight (CORS/OPTIONS) están permitidas sin autenticación para compatibilidad con el frontend.
 
-
-
-
+---
 
 ## ✅ Tests Automáticos
 

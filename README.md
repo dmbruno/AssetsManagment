@@ -78,14 +78,15 @@ npm run dev
 
 ---
 
-## 👨‍💻 Autor
+## 👤 Autor
 
-- **Diego Bruno**
+**Diego M. Bruno**  
+🧑‍💻 *Full Stack Developer*  
+📱 +54 387 505 1112  
+📧 [dmbruno61@gmail.com](mailto:dmbruno61@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/diego-martin-bruno/)  
+💻 [GitHub](https://github.com/dmbruno)
 
-  - 📞 Teléfono: [387505112](tel:387505112)
-  - ✉️ Email: [dmbruno61@gmail.com](mailto:dmbruno61@gmail.com)
-  - [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/diego-martin-bruno/)
-  - [![GitHub](https://img.shields.io/badge/GitHub-black?logo=github)](https://github.com/dmbruno)
 
 ---
 
