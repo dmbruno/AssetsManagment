@@ -20,6 +20,7 @@ import LoginPage from './pages/Login/LoginPage'
 import RegisterPage from './pages/Login/RegisterPage'
 import UsersListPage from './pages/Users/UsersListPage'
 import PrivateRoute from './routes/PrivateRoute'
+import AuthRedirect from './routes/AuthRedirect'
 
 function App() {
   return (
@@ -43,7 +44,8 @@ function App() {
           <Route path="/assets/:id/add" element={<PrivateRoute><AddTransactionPage /></PrivateRoute>} />
           <Route path="/transactions" element={<PrivateRoute><GlobalTransactionHistoryPage /></PrivateRoute>} />
           <Route path="/transactions/:id/edit" element={<PrivateRoute><EditTransactionPage /></PrivateRoute>} />
-          <Route path="/" element={<Navigate to="/portfolio" />} />
+          {/* Redirección condicional en la raíz */}
+          <Route path="/" element={<AuthRedirect />} />
         </Route>
       </Route>
     </Routes>
