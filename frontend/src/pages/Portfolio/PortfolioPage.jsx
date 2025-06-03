@@ -61,26 +61,23 @@ const PortfolioPage = () => {
     <div className="portfolio-container">
       <div className="portfolio-header-fixed">
         {currentUser && (
-          <div className="portfolio-user-greeting">
-            <div className="portfolio-user-header">
-              <div className="portfolio-user-info">
-                <h2 className="portfolio-user-name">Bienvenido, {currentUser.nombre}</h2>
-                <p className="portfolio-user-email">{currentUser.email}</p>
-              </div>
-              <div className="portfolio-user-actions">
-                {currentUser.email === 'admin@gmail.com' && (
-                  <button className="portfolio-register-btn" onClick={handleNavigateToRegister} title="Registrar nuevo usuario">
-                    <MdPersonAdd size={24} className="portfolio-register-icon" />
-                  </button>
-                )}
-                <button className="portfolio-logout-btn" onClick={handleLogout} title="Cerrar sesión">
-                  <MdLogout size={22} className="portfolio-logout-icon" />
-                </button>
-              </div>
+          <header className="portfolio-header">
+            <div className="portfolio-user-info">
+              <h2>Bienvenido, {currentUser.nombre}</h2>
+              <p>{currentUser.email}</p>
             </div>
-          </div>
+            <div className="portfolio-actions">
+              {currentUser.email === 'admin@gmail.com' && (
+                <button onClick={handleNavigateToRegister} title="Registrar nuevo usuario">
+                  <MdPersonAdd size={22} />
+                </button>
+              )}
+              <button onClick={handleLogout} title="Cerrar sesión">
+                <MdLogout size={20} />
+              </button>
+            </div>
+          </header>
         )}
-
         <PortfolioSummary assets={filteredAssets} />
         <AssetFilters
           searchTerm={searchTerm}

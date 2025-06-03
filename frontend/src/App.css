@@ -5,10 +5,17 @@
 }
 
 
-html, body {
+html {
   height: 100%;
   background-color: #cacaca; 
   font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #ffffff, #e0f2ff);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 #root {
