@@ -9,7 +9,7 @@ import AssetTopBar from "../../components/layout/AssetTopBar";
 import { loadAssets } from "../../features/assets/assetsSlice";
 import { loadTransactions } from "../../features/transactions/transactionsSlice";
 import './AddTransactionPage.css';
-import { authFetch } from '../../utils/auth';
+import { authFetch } from '../../app/api';
 
 const AddTransactionPage = () => {
     const { id } = useParams();
