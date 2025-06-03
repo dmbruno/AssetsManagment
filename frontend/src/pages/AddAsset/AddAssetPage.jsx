@@ -45,7 +45,7 @@ const AddAssetPage = () => {
     if (!confirmed) return;
 
     try {
-      const assetResponse = await fetch("/activos/", {
+      const assetResponse = await authFetch("/activos/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -60,7 +60,7 @@ const AddAssetPage = () => {
       if (!assetResponse.ok) throw new Error("Error al crear el activo");
       const asset = await assetResponse.json();
 
-      const txResponse = await fetch("/transacciones/", {
+      const txResponse = await authFetch("/transacciones/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

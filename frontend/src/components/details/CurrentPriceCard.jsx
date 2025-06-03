@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { loadAssets } from '../../features/assets/assetsSlice';
 import './CurrentPriceCard.css';
+import { authFetch } from '../../utils/authFetch'; // Asegúrate de que la ruta sea correcta
 
 const CurrentPriceCard = ({ assetId, currentPrice }) => {
   const [price, setPrice] = useState(currentPrice);
@@ -26,7 +27,7 @@ const CurrentPriceCard = ({ assetId, currentPrice }) => {
 
     try {
       console.log("📤 Sending price:", parsed);
-      const response = await fetch(`http://localhost:5001/activos/${assetId}`, {
+      const response = await authFetch(`/activos/${assetId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ current_price: parsed })

@@ -3,8 +3,7 @@ import { FaEdit, FaTrash } from 'react-icons/fa';
 import './UsersListPage.css';
 import PageTopBar from '../../components/layout/PageTopBar';
 import { useNavigate } from 'react-router-dom';
-
-
+import { authFetch } from '../../utils/authFetch'; // Asegúrate de que la ruta sea correcta
 
 
 const UserListPage = () => {
@@ -12,10 +11,16 @@ const UserListPage = () => {
   const [usuarios, setUsuarios] = useState([]);
 
   useEffect(() => {
-    fetch('/usuarios')
-      .then(res => res.json())
-      .then(data => setUsuarios(data))
-      .catch(err => console.error('Error:', err));
+    const fetchData = async () => {
+      try {
+        const response = await authFetch(`/usuarios`);
+        setUsuarios(response.data);
+      } catch (error) {
+        console.error('Error fetching usuarios:', error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const handleEdit = (id) => {
@@ -27,7 +32,7 @@ const UserListPage = () => {
     if (!confirm) return;
 
     try {
-      const res = await fetch(`/usuarios/${id}`, {
+      const res = await authFetch(`/usuarios/${id}`, {
         method: 'DELETE'
       });
       if (res.ok) {

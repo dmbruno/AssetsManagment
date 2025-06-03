@@ -8,6 +8,7 @@ import CancelButton from "../../components/buttons/CancelButton";
 import AssetTopBar from "../../components/layout/AssetTopBar";
 import { loadAssets } from "../../features/assets/assetsSlice";
 import { loadTransactions } from "../../features/transactions/transactionsSlice";
+import { authFetch } from "../../utils/authFetch"; // Asegúrate de importar authFetch
 
 const EditTransactionPage = () => {
     const { id } = useParams(); // id de la transacción
@@ -56,7 +57,7 @@ const EditTransactionPage = () => {
         };
 
         try {
-            const response = await fetch(`/transacciones/${transaction.id}`, {
+            const response = await authFetch(`/transacciones/${transaction.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(updated)

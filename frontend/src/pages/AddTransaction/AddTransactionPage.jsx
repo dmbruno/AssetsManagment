@@ -9,6 +9,7 @@ import AssetTopBar from "../../components/layout/AssetTopBar";
 import { loadAssets } from "../../features/assets/assetsSlice";
 import { loadTransactions } from "../../features/transactions/transactionsSlice";
 import './AddTransactionPage.css';
+import { authFetch } from '../../utils/auth';
 
 const AddTransactionPage = () => {
     const { id } = useParams();
@@ -67,7 +68,7 @@ const AddTransactionPage = () => {
         
 
         try {
-            const response = await fetch('/transacciones/', {
+            const response = await authFetch('/transacciones/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newTransaction)

@@ -9,6 +9,7 @@ import AssetTopBar from '../../components/layout/AssetTopBar';
 import AssetHeader from '../../components/layout/AssetHeader';
 
 import { selectTransactionsByAsset } from '../../features/transactions/transactionsSlice';
+import { authFetch } from '../../utils/auth';
 
 const SellAssetPage = () => {
   const { id } = useParams();
@@ -68,7 +69,7 @@ const SellAssetPage = () => {
     };
 
     try {
-      const response = await fetch('/transacciones', {
+      const response = await authFetch('/transacciones', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(tx)
