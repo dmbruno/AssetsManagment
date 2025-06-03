@@ -81,16 +81,16 @@ const PortfolioPage = () => {
           </div>
         )}
 
-        <div className="portfolio-scrollable-list">
-          <PortfolioSummary assets={filteredAssets} />
-          <AssetFilters
-            searchTerm={searchTerm}
-            setSearchTerm={setSearchTerm}
-            activeFilter={activeFilter}
-            setActiveFilter={setActiveFilter}
-          />
-        </div>
+        <PortfolioSummary assets={filteredAssets} />
+        <AssetFilters
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          activeFilter={activeFilter}
+          setActiveFilter={setActiveFilter}
+        />
+      </div>
 
+      <div className="portfolio-scrollable-list">
         <AssetsList assets={filteredAssets} />
       </div>
     </div>
