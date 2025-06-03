@@ -82,6 +82,15 @@ await fetch('http://localhost:5001/transacciones', {
 
 ---
 
+## 🔒 Autenticación y protección de rutas (JWT)
+
+- El login obtiene un token JWT desde el backend y lo guarda en localStorage.
+- Todas las peticiones protegidas usan la utilidad `authFetch`, que agrega el token en el header `Authorization: Bearer <token>`.
+- Las rutas privadas de la app están protegidas con el componente `PrivateRoute`, que solo permite el acceso si hay un token válido.
+- Si el token es inválido o expiró, el usuario es redirigido automáticamente a la pantalla de login.
+
+---
+
 ## 🧪 Estado actual
 
 - [x] Portfolio completo con activos agrupados  
