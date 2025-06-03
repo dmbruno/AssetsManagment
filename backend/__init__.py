@@ -21,7 +21,10 @@ def create_app():
 
     db.init_app(app)
     # Configuración CORS para permitir requests desde el frontend
-    CORS(app, supports_credentials=True, resources={r"/*": {"origins": ["http://localhost:5173"]}})
+      CORS(app, supports_credentials=True, origins=[
+        "http://localhost:5173",
+        "https://assets-managment-ruddy.vercel.app"
+    ])
 
     # Importar modelos (estos deben existir)
     from app.models.user import User

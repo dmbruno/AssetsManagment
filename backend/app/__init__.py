@@ -23,7 +23,11 @@ def create_app():
     app.config.from_object("app.config.Config")
 
     db.init_app(app)
-    CORS(app)
+    # Configuración CORS para desarrollo y producción
+    CORS(app, supports_credentials=True, origins=[
+        "http://localhost:5173",
+        "https://assets-managment-ruddy.vercel.app"
+    ])
 
     # ✅ Importar modelos
     from app.models.user import User
