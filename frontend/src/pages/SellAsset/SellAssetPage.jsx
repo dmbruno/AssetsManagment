@@ -9,7 +9,7 @@ import AssetTopBar from '../../components/layout/AssetTopBar';
 import AssetHeader from '../../components/layout/AssetHeader';
 
 import { selectTransactionsByAsset } from '../../features/transactions/transactionsSlice';
-import { authFetch } from '../../utils/auth';
+import { authFetch } from '../../app/api';
 
 const SellAssetPage = () => {
   const { id } = useParams();
