@@ -25,6 +25,21 @@ const DataLoader = () => {
 
   const isLoading = assetsStatus !== 'succeeded' || txStatus !== 'succeeded';
 
+  if (!currentUser) {
+    return <p style={{ textAlign: 'center' }}>Por favor inicia sesión para continuar.</p>;
+  }
+
+  if (assetsStatus === 'failed' || txStatus === 'failed') {
+    return (
+      <div style={{ textAlign: 'center', color: 'red' }}>
+        <p>❌ Error al cargar datos. Verifica tu conexión o vuelve a iniciar sesión.</p>
+        <button onClick={() => { dispatch(loadAssets()); dispatch(loadTransactions()); }}>
+          Reintentar
+        </button>
+      </div>
+    );
+  }
+
   if (isLoading) return <p style={{ textAlign: 'center' }}>🔄 Cargando datos...</p>;
 
   return (
