@@ -1,0 +1,71 @@
+.portfolio-summary {
+    background: #f3f3f3;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.summary-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.change.positive {
+    color: green;
+}
+
+.change.negative {
+    color: red;
+}
+
+
+.total-value h1 {
+    font-size: 2rem;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.conteiner-change {
+    padding-top: 10px;
+}
+
+
+.change.positive {
+    color: green;
+    font-weight: 500;
+    font-size: 0.9rem;
+    background: #dfffe1;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+}
+
+.distribution {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.stock {
+    background-color: #3b82f6;
+}
+
+.bond {
+    background-color: #10b981;
+}
+
+.crypto {
+    background-color: #8b5cf6;
+}

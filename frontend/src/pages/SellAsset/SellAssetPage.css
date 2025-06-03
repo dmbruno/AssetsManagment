@@ -1,0 +1,127 @@
+/* src/pages/SellAsset/SellAssetPage.css */
+
+.sell-asset-container {
+    
+    background-color: #ccc;
+    min-height: 100vh;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  .asset-summary {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    margin-top: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .asset-summary h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .asset-summary .muted {
+    color: #aaa;
+    font-size: 14px;
+  }
+  
+  .badge {
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .badge.stock {
+    background-color: #3b33ff;
+  }
+  
+  .available-info {
+    margin: 10px 0 20px 0;
+    padding-left: 2px;
+    font-size: 15px;
+    color: #222;
+  }
+  
+  .sell-form {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    padding-bottom: 30px;
+    margin: 1rem;
+    margin-top: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .sell-form label {
+    display: block;
+    font-size: 14px;
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+  
+  .sell-form input {
+    width: 100%;
+    margin-top: 6px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    border: none;
+    font-size: 14px;
+  }
+  
+  .btn-filled.confirm-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #0000ff;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+  
+  .btn-outline.cancel-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: white;
+    color: #0000ff;
+    font-weight: bold;
+    border: 2px solid #0000ff;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  .page-header {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 15px;
+    background-color: #f5f2f2;
+  }
+  
+  .page-header h1 {
+    font-size: 20px;
+    margin: 0;
+    margin-left: 0.5rem;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  .action-buttons-sale{
+    margin: 1rem;
+    margin-top: 60px;
+  }

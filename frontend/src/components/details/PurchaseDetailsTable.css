@@ -1,0 +1,61 @@
+.purchase-details-table {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+  max-height: 330px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.purchase-details-table table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.purchase-details-table thead {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 2;
+}
+
+.purchase-details-table th,
+.purchase-details-table td {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+.purchase-details-table .subtitle-purchases {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Scroll solo al cuerpo */
+.purchase-details-table tbody {
+  display: block;
+  overflow-y: auto;
+  max-height: 320px;
+  width: 100%;
+}
+
+.purchase-details-table thead,
+.purchase-details-table tbody tr {
+  display: table;
+  width: 100%;
+ table-layout: fixed;
+}
+
+.buy-row {
+  color: green;
+}
+.sell-row {
+  color: red;
+}

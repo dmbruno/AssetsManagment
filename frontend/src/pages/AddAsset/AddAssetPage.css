@@ -1,0 +1,100 @@
+
+
+.add-asset-container {
+    
+    min-height: 100vh;
+  }
+  
+  .add-asset-container h1 {
+    margin-bottom: 52px;
+    padding: 16px;
+
+    
+  }
+  
+  .asset-form {
+    
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+    margin: 1rem;
+    margin-bottom: 1.5rem;
+
+  }
+  
+  .asset-form h2 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  
+  .asset-form label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  
+  .asset-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f0eeee;
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  .asset-form input::placeholder {
+    color: #999;
+  }
+  
+  .asset-form input[type="date"] {
+    color: #444;
+  }
+  
+
+
+ 
+
+  
+  .add-button {
+    background-color: #5d6dfa;
+    color: white;
+    font-weight: bold;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+  }
+  
+  .cancel-button {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: 2px solid black;
+    width: 100%;
+  }
+
+  .add-asset-buttons {
+    margin: 1rem;
+    
+  }
+
+  .spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }

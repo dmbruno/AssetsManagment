@@ -1,0 +1,21 @@
+.asset-details-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Fijamos explícitamente la altura del header */
+.asset-fixed-header {
+  flex-shrink: 0;
+  background-color: #ccc;
+  z-index: 2;
+  
+}
+
+/* Esto asegura que el resto se adapte y scrollee */
+.asset-scrollable-history {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: -60px;
+}

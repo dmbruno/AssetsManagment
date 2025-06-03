@@ -1,0 +1,38 @@
+/* Común */
+.primary-button,
+.cancel-button {
+  width: 100%;
+  padding: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  cursor: pointer;
+}
+
+/* 💙 Azul principal */
+.primary-button {
+  background-color: #5865f2;
+  color: white;
+  border: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.primary-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ⚪ Botón blanco con borde azul */
+.cancel-button {
+  background-color: white;
+  border: 2px solid #5865f2;
+  color: #5865f2;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cancel-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,119 @@
+.transaction-table-container {
+  margin: 1rem;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  max-height: 420px;
+}
+
+.transaction-table-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-grow: 1;
+}
+
+.transaction-table-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.transaction-table-scroll thead {
+  position: sticky;
+  top: 0;
+  background: #f9f9f9;
+  z-index: 1;
+}
+
+.transaction-table-scroll th,
+.transaction-table-scroll td {
+  padding: 10px 8px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Distribución proporcional */
+.transaction-table-scroll th:nth-child(1),
+.transaction-table-scroll td:nth-child(1) {
+  width: 25%;
+}
+.transaction-table-scroll th:nth-child(2),
+.transaction-table-scroll td:nth-child(2) {
+  width: 15%;
+}
+.transaction-table-scroll th:nth-child(3),
+.transaction-table-scroll td:nth-child(3),
+.transaction-table-scroll th:nth-child(4),
+.transaction-table-scroll td:nth-child(4),
+.transaction-table-scroll th:nth-child(5),
+.transaction-table-scroll td:nth-child(5) {
+  width: 20%;
+}
+
+.buy {
+  color: #25894a;
+  font-weight: bold;
+}
+
+.sell {
+  color: #fb3434f5;
+  font-weight: bold;
+}
+
+.transaction-type-filters {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.type-filter-button {
+  flex: 1;
+  padding: 10px;
+  background-color: #f1f5f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+.type-filter-button:hover {
+  background-color: #e0e7ff;
+}
+
+.type-filter-button.active {
+  background-color: #4786ecd6;
+  color: white;
+  border-color: #4786ecd6;
+}
+
+/* Footer fijo */
+.footer-buttons {
+  padding: 1rem;
+  
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+}
+
+.type-filter-button.active.buy {
+  background-color: #34b062d7; /* verde */
+  border-color: #34b062d7;
+  color: white;
+}
+
+.type-filter-button.active.sell {
+  background-color: #f55858df; /* rojo */
+  border-color: #f55858df;
+  color: white;
+}

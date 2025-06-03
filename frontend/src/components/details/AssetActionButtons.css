@@ -1,0 +1,52 @@
+.asset-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 1.5rem 1rem;
+}
+
+.btn-filled,
+.btn-outline {
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* ✅ Filled button */
+.btn-filled {
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.btn-filled:hover {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btn-filled:active {
+  transform: scale(0.95);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ Outline button */
+.btn-outline {
+  background-color: white;
+  color: #1d4ed8;
+  border: 2px solid #1d4ed8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.btn-outline:hover {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btn-outline:active {
+  transform: scale(0.95);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}

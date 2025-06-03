@@ -1,0 +1,70 @@
+/* src/pages/Login/LoginPage.css */
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
+    background: #f4f4f8;
+    justify-content: center;
+  }
+
+.login-container h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #4f4fa4;
+
+}
+  
+ 
+  
+  .login-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .login-form input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.2s;
+    font-style: italic;
+  }
+  
+  .login-form input:focus {
+    border-color: #4A90E2;
+  }
+  
+  .login-form button {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .login-form button:hover {
+    background-color: #4178c0;
+  }
+  
+  .error {
+    color: crimson;
+    font-size: 0.9rem;
+    text-align: center;
+  }

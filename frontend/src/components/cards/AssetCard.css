@@ -1,0 +1,66 @@
+/* src/components/cards/AssetCard.css */
+
+.asset-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    
+    font-family: Arial, sans-serif;
+    margin: 1rem;
+  }
+
+  .asset-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    
+  }
+  
+  .asset-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .asset-name {
+    color: gray;
+    font-size: 14px;
+    margin-top: 2px;
+  }
+  
+  .type-badge {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+  }
+  
+  .type-badge.stock {
+    background-color: #3b82f6; /* blue */
+  }
+  
+  .type-badge.bond {
+    background-color: #22c55e; /* green */
+  }
+  
+  .type-badge.crypto {
+    background-color: #a855f7; /* purple */
+  }
+  
+  .asset-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  .asset-detail .label {
+    color: #888;
+    font-size: 14px;
+  }
+  
+  .asset-detail .value {
+    font-weight: bold;
+    font-size: 16px;
+  }

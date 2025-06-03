@@ -1,0 +1,18 @@
+.asset-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 50px; /* espacio para que el scroll no corte el footer */
+    
+    border-radius: 10px;
+    
+  }
+
+  .empty-assets {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 18px;
+    font-style: italic;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    
+  }

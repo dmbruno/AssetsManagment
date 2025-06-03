@@ -1,0 +1,99 @@
+.portfolio-user-greeting {
+    padding:  1.5rem;
+    background-color: rgba(255, 255, 255, 0.861);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border-bottom: 1px solid #313030;
+  }
+  .portfolio-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    overflow: hidden;
+  }
+
+  .portfolio-header-fixed {
+    flex-shrink: 0;
+    z-index: 2;
+  }
+
+  .portfolio-scrollable-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    
+    z-index: 1;
+  }
+  
+  .portfolio-user-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .portfolio-user-info {
+    text-align: left;
+  }
+  
+  .portfolio-user-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937; /* gris oscuro */
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .portfolio-user-email {
+    font-size: 0.95rem;
+    color: #6b7280; /* gris medio */
+    margin-top: 0.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .portfolio-logout-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-top: 5px;
+    margin-right: 10px;
+    
+  }
+  
+  .portfolio-logout-icon {
+    color: #374151;
+     /* ícono mirando a la izquierda */
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .portfolio-logout-icon:hover {
+    color: #dc2626; /* rojo intenso */
+    transform: rotate(180deg) scale(1.2);
+  }
+
+  .portfolio-user-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .portfolio-register-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .portfolio-register-icon {
+    color: #374151;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  .portfolio-register-icon:hover {
+    transform: scale(1.2);
+    color: #374151;
+  }

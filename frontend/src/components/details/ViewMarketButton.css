@@ -1,0 +1,23 @@
+.view-market-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  margin-top: 1rem;
+  background-color: white;
+  color: #1d4ed8;
+  border: 2px solid #1d4ed8;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.view-market-button:hover {
+  background-color: #f0f8ff;
+}
+
+.conteiner-button-view-market{
+  margin: 1rem;
+}
