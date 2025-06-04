@@ -86,7 +86,6 @@ def login():
 
 
 @user_routes.route('/usuarios', methods=['POST', 'OPTIONS'])
-@token_required
 def create_usuario():
     if request.method == 'OPTIONS':
         return '', 200
