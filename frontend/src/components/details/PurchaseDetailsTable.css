@@ -1,48 +1,58 @@
 .purchase-details-table {
-  background: white;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+  background: #fff;
+  padding: 1.1rem 1.2rem 1rem 1.2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(30, 41, 59, 0.10);
   max-height: 330px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin: 1rem;
+  margin: 0;
+  width: 100%;
+}
+
+.purchase-details-table h3 {
+  font-size: 1.2rem !important;
+  font-weight: 700;
+  margin: 0 0 0.2rem 0;
+  color: #22223b;
+}
+
+.purchase-details-table .subtitle-purchases {
+  margin: 0 0 0.7rem 0;
+  font-size: 0.68rem !important;
+  color: #888;
 }
 
 .purchase-details-table table {
   border-collapse: collapse;
   width: 100%;
   table-layout: fixed;
+  font-size: 0.77rem !important;
 }
 
-.purchase-details-table thead {
+.purchase-details-table thead th {
   position: sticky;
   top: 0;
-  background: white;
   z-index: 2;
+  background: #fff;
+  color: #64748b;
+  font-weight: 600;
+  border-bottom: 1.2px solid #e5e7eb;
+  font-size: 0.69rem;
 }
 
 .purchase-details-table th,
 .purchase-details-table td {
-  padding: 10px;
+  padding: 0.38rem 0.4rem;
   text-align: left;
-  font-size: 14px;
-  border-bottom: 1px solid #eee;
-  white-space: nowrap;
+  word-break: break-word;
 }
 
-.purchase-details-table .subtitle-purchases {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #888;
-}
-
-/* Scroll solo al cuerpo */
 .purchase-details-table tbody {
   display: block;
   overflow-y: auto;
-  max-height: 320px;
+  max-height: 220px;
   width: 100%;
 }
 
@@ -50,12 +60,16 @@
 .purchase-details-table tbody tr {
   display: table;
   width: 100%;
- table-layout: fixed;
+  table-layout: fixed;
 }
 
 .buy-row {
-  color: green;
+  color: #059669;
+  font-weight: 600;
+  font-size: 0.77rem !important;
 }
 .sell-row {
-  color: red;
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 0.77rem !important;
 }

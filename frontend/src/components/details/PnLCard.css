@@ -1,47 +1,113 @@
 .pnl-card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 1.25rem 1rem;
-  margin: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem 1rem 1.2rem;
+  margin: 0;
+  box-shadow: 0 4px 18px rgba(30, 41, 59, 0.10);
+  width: 100%;
+  max-width: 420px;
+  align-self: center;
 }
 
-.pnl-card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  font-weight: 600;
+.pnl-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  margin-bottom: 0.1rem;
+}
+
+.pnl-title-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.18em;
+  
+}
+
+.pnl-title {
+  font-size: 1.2rem !important;
+  font-weight: 700;
+  color: #22223b;
+  margin: 0;
+}
+
+.pnl-divider {
+  border: none;
+  border-top: 1.2px solid #e5e7eb;
+  margin: 0 0 0.7rem 0;
 }
 
 .pnl-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.75rem 0.5rem;
+  gap: 0.5rem 0.2rem;
   text-align: center;
 }
 
 .pnl-label {
-  color: #666;
-  font-size: 13px;
+  color: #64748b;
+  font-size: 0.68rem !important;
   font-weight: 500;
+  margin-bottom: 0.1rem;
 }
 
 .pnl-value {
   font-weight: 600;
-  font-size: 15px;
-}
-
-.pnl-value.green {
-  color: #0a8f3c;
-  background-color: #e1f7e8;
+  font-size: 0.77rem !important;
+  color: #22223b;
+  background: none;
   border-radius: 6px;
-  padding: 5px 5px;
+  padding: 0.13em 0.2em;
   display: inline-block;
 }
 
-.pnl-value.red {
-  color: #c62828;
-  background-color: #fce8e6;
-  border-radius: 6px;
-  padding: 5px 5px;
-  display: inline-block;
+.pnl-value-main {
+  font-size: 0.77rem !important;
+}
+
+.pnl-badge.green {
+  color: #059669;
+  background: #e0f7ef;
+  border-radius: 7px;
+  padding: 0.18em 0.5em;
+  box-shadow: 0 1px 4px rgba(5, 150, 105, 0.07);
+  font-size: 0.77rem !important;
+}
+
+.pnl-badge.red {
+  color: #dc2626;
+  background: #ffeaea;
+  border-radius: 7px;
+  padding: 0.18em 0.5em;
+  box-shadow: 0 1px 4px rgba(220, 38, 38, 0.07);
+  font-size: 0.77rem !important;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  align-items: center;
+  line-height: 1.1;
+  min-width: 60px;
+}
+
+.pnl-badge.red .pnl-arrow {
+  font-size: 0.85em;
+  margin-bottom: 0.1em;
+  line-height: 1;
+}
+
+/* === Tipografías unificadas globales (excepto PortfolioPage) === */
+.subtitle, .muted, .subtitle-purchases, .asset-info-divider {
+  font-size: 0.68rem !important;
+}
+
+.pnl-card, .pnl-label, .pnl-value, .pnl-value-main, .pnl-badge, .pnl-arrow {
+  font-size: 0.77rem !important;
+}
+
+.pnl-title, h2 {
+  font-size: 1.2rem !important;
+}
+
+h1 {
+  font-size: 1.5rem !important;
 }

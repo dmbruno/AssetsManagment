@@ -96,12 +96,9 @@ const SellAssetPage = () => {
 
   return (
     <div className="sell-asset-container">
+
       <AssetTopBar name={asset.name} symbol={asset.symbol} type={asset.type} />
-      <AssetHeader
-        name={asset.name}
-        symbol={asset.symbol}
-        type={asset.type}
-      />
+      
       <div className="asset-summary">
         <div>
           <h2>{asset.symbol}</h2>
@@ -112,6 +109,7 @@ const SellAssetPage = () => {
       </div>
 
       <div className="sell-form">
+        <h2 className="titulo">Basic Information</h2>
         <label>
           Quantity to Sell
           <input

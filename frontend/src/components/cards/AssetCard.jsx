@@ -15,7 +15,7 @@ const AssetCard = ({ id, name, symbol, type, currentValue, quantity, purchasePri
   return (
     <Link to={`/assets/${id}`} className="asset-card-link">
       <div className="asset-card">
-        <div className="asset-header">
+        <div className="asset-header-card">
           <div>
             <h3>{symbol}</h3>
             <p className="asset-name">{name}</p>

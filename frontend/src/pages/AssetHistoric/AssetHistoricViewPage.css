@@ -1,8 +1,19 @@
 .asset-historic-page {
-
-  background-color: #ccc;
-  min-height: 100vh;
+  min-height: 100dvh;
+  background: linear-gradient(to top, #2e3032, #c3d6ee);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 50px;
+}
+
+.scrollable-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 0 1rem 1.5rem 1rem;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
 }

@@ -11,7 +11,7 @@ const AssetHeader = ({ name, symbol, type }) => {
 
   return (
     <div className="asset-header-container">
-      <div className="asset-header-1">
+      <div className="asset-header">
         <h2 className="symbol">{symbol}</h2>
         <p className="name">{name}</p>
       </div>

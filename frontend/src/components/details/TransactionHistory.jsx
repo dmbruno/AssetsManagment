@@ -15,7 +15,7 @@ const formatDate = (isoDate) => {
 const TransactionHistory = ({ transactions, onEdit, onDelete }) => {
   return (
     <div className="transaction-history">
-      <h3 className="section-title">Transaction History</h3>
+      <h3 className="section-title-history">Transaction History</h3>
       {[...transactions].reverse().map((tx, index) => {
         const isBuy = tx.type === "buy";
         const icon = isBuy ? "🟢" : "🔴";

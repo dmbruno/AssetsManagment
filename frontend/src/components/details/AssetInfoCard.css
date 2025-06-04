@@ -1,49 +1,101 @@
 .asset-info-card {
-    background-color: white;
-    border-radius: 12px;
-    padding: 16px;
-    margin: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.3rem 1.5rem 1.1rem 1.5rem;
+    
+    box-shadow: 0 4px 18px rgba(30, 41, 59, 0.10);
+    display: flex;
+    flex-direction: column;
+    
+    min-width: 0;
+    max-width: 420px;
+    width: 100%;
+    align-self: center;
+    font-size: 0.77rem !important;
   }
   
   .section-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.09 );
+    font-size: 1.2rem !important;
+    font-weight: 700;
+    
+    color: #22223b;
+    letter-spacing: 0.01em;
+    text-shadow: none;
+  }
+  
+  .asset-info-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 0.2rem 0 0.7rem 0;
+    font-size: 0.68rem !important;
   }
   
   .info-row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: 0.3rem;
+    gap: 1.2rem;
+    font-size: 0.77rem !important;
   }
   
   .label.muted {
-    color: #999;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    
+    color: #64748b;
+    font-size: 0.68rem !important;
+    font-weight: 500;
+    letter-spacing: 0.01em;
   }
   
   .value {
-    font-weight: bold;
-    font-size: 15px;
+    font-weight: 600;
+    font-size: 0.77rem !important;
+    color: #22223b;
   }
-
+  
   .change.positive {
-    color: green;
-    font-weight: bold;
-    background-color: #d4f8d4; /* verde claro */
-    padding: 4px 8px;
-    border-radius: 8px;
+    color: #059669;
+    background: #e0f7ef;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 7px;
+    font-size: 0.77rem !important;
+    box-shadow: 0 1px 4px rgba(5, 150, 105, 0.07);
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
   }
   
   .change.negative {
-    color: red;
-    font-weight: bold;
-    background-color: #fcd6d6; /* rojo claro */
-    padding: 4px 8px;
-    border-radius: 8px;
+    color: #dc2626;
+    background: #ffeaea;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 7px;
+    font-size: 0.77rem !important;
+    box-shadow: 0 1px 4px rgba(220, 38, 38, 0.07);
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+  }
+  
+  .asset-info-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    font-size: 1.2rem !important;
+    font-weight: 700;
+    color: #22223b;
+    
+  }
+  
+  .asset-info-icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.18em;
+
+    
+    
+    
   }

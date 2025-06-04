@@ -98,9 +98,8 @@ const AddTransactionPage = () => {
   <div className="add-transaction-page">
     <AssetTopBar symbol={formValues.symbol} />
 
-    <div className="scrollable-content">
-      <h1>Add Transaction</h1>
-
+    <div className="scrollable-content-transaction">
+      
       <AddAssetForm
         onChange={handleChange}
         values={formValues}

@@ -1,67 +1,79 @@
-/* src/components/details/CurrentPriceCard.css */
-
 .current-price-card {
-  background-color: white;
-  padding: 16px;
+  background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+  padding: 0.85rem 1rem;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
-  margin: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .current-price-card .label {
-  color: #888;
-  font-size: 14px;
-  margin-bottom: 4px;
+  color: #64748b;
+  font-size: 0.68rem !important;
+  margin: 0;
+  font-weight: 500;
 }
 
 .price-edit-row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.5rem;
 }
 
 .price-input-wrapper {
   display: flex;
   align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
+  font-size: 0.77rem !important;
+  font-weight: 600;
+  color: #111827;
+  background: #e2e8f0;
+  border-radius: 8px;
+  padding: 0.25rem 0.5rem;
+  min-width: 100px;
+  transition: background 0.2s ease;
+}
+
+.price-input-wrapper.editing {
+  background: #fff;
+  border: 1px solid #cbd5e1;
 }
 
 .currency-symbol {
   margin-right: 4px;
-  color: #333;
+  font-weight: 600;
+  color: #111827;
 }
 
 .price-input {
   border: none;
   background: transparent;
-  font-size: 24px;
-  font-weight: bold;
-  width: 100px;
+  font-size: 0.77rem !important;
+  font-weight: 600;
+  width: 70px;
   outline: none;
-  color: #333;
-}
-
-.price-input-wrapper.editing .price-input {
-  background: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  
+  color: #111827;
+  text-align: left;
 }
 
 .price-edit-row button {
   background: none;
   border: none;
+  font-size: 1.1rem;
   cursor: pointer;
-  font-size: 20px;
+  padding: 0.25rem;
+  transition: transform 0.2s ease;
 }
 
-.price-edit-row .save-confirm {
-  color: green;
-  font-weight: bold;
-  font-size: 14px;
-  margin-left: 6px;
+.price-edit-row button:hover {
+  transform: scale(1.1);
+}
+
+.save-confirm {
+  color: #10b981;
+  font-size: 0.8rem;
+  font-weight: 500;
   animation: fadeInOut 2s ease-in-out;
 }
 
@@ -70,4 +82,21 @@
   10% { opacity: 1; }
   90% { opacity: 1; }
   100% { opacity: 0; }
+}
+
+/* === Tipografías unificadas globales (excepto PortfolioPage) === */
+.subtitle, .muted, .subtitle-purchases, .asset-info-divider {
+  font-size: 0.68rem !important;
+}
+
+.current-price-card, .label, .price-input, .price-input-wrapper {
+  font-size: 0.77rem !important;
+}
+
+h2, .main-title, .page-title {
+  font-size: 1.2rem !important;
+}
+
+h1 {
+  font-size: 1.5rem !important;
 }

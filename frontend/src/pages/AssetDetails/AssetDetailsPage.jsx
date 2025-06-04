@@ -1,4 +1,3 @@
-
 // src/pages/AssetDetails/AssetDetailsPage.jsx
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -76,20 +75,22 @@ const AssetDetailsPage = () => {
     <div className="asset-details-page">
       <div className="asset-fixed-header">
         <AssetTopBar symbol={asset.symbol} />
+      </div>
+      <div className="prueba">
+
         <AssetHeader
           name={asset.name}
           symbol={asset.symbol}
           type={asset.type}
         />
         <CurrentPriceCard currentPrice={asset.current_price} assetId={asset.id} />
+      </div>
+      <div className="asset-scrollable-content">
         <AssetInfoCard
           quantity={netQuantity}
           purchasePrice={avgPrice}
           currentPrice={asset.current_price}
         />
-      </div>
-
-      <div className="asset-scrollable-history">
         <AssetActionButtons
           onSell={handleSell}
           onAdd={handleAddTransaction}

@@ -7,18 +7,23 @@ const PnLCard = ({ currentPrice, avgPurchasePrice, quantity, pnl }) => {
 
   return (
     <div className="pnl-card">
-      <h3>PnL</h3>
+      <div className="pnl-title-row">
+        <h3 className="pnl-title">PnL</h3>
+        <span className="pnl-title-icon" role="img" aria-label="PnL">📈</span>
+      </div>
+      <hr className="pnl-divider" />
       <div className="pnl-grid">
         <div className="pnl-label">Current Price</div>
         <div className="pnl-label">PPC</div>
         <div className="pnl-label">Net Quantity</div>
         <div className="pnl-label">Unr. PnL</div>
 
-        <div className="pnl-value">${currentPrice.toFixed(2)}</div>
-        <div className="pnl-value">${avgPurchasePrice.toFixed(2)}</div>
-        <div className="pnl-value">{quantity}</div>
-        <div className={`pnl-value ${pnlColor}`}>
-          {arrow} ${Math.abs(pnl).toFixed(2)}
+        <div className="pnl-value pnl-value-main">${currentPrice.toFixed(2)}</div>
+        <div className="pnl-value pnl-value-main">${avgPurchasePrice.toFixed(2)}</div>
+        <div className="pnl-value pnl-value-main">{quantity}</div>
+        <div className={`pnl-value pnl-badge ${pnlColor}`}>
+          <span className="pnl-arrow">{arrow}</span>
+          ${Math.abs(pnl).toFixed(2)}
         </div>
       </div>
     </div>

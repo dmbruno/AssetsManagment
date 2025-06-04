@@ -62,7 +62,7 @@ const AssetHistoricViewPage = () => {
         />
         <div className="view-market-button-container">
           <ViewMarketButton
-            text="View on CoinMarketCap ↗️"
+            text="CoinMarketCap ↗️"
             onClick={() => window.open('https://coinmarketcap.com', '_blank')}
           />
         </div>

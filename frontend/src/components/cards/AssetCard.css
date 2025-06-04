@@ -25,10 +25,11 @@
 }
 
 /* === Header === */
-.asset-header {
+.asset-header-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .asset-header h3 {
@@ -53,6 +54,7 @@
   color: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
+
 
 .type-badge.stock {
   background-color: #2563eb;

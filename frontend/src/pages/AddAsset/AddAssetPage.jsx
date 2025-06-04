@@ -90,24 +90,24 @@ const AddAssetPage = () => {
   };
 
   return (
-    <div className="add-asset-container">
-      <PageTopBar title="Add Asset" />
+  <div className="add-asset-container">
+    <PageTopBar title="Add Asset" />
 
-      <div className="page-scrollable-content">
-        <AddAssetForm
-          onChange={handleChange}
-          values={formValues}
-          showTypeSelect={true}
-          disableIdentityFields={false}
-        />
+    <div className="page-scrollable-content">
+      <AddAssetForm
+        onChange={handleChange}
+        values={formValues}
+        showTypeSelect={true}
+        disableIdentityFields={false}
+      />
 
-        <div className="add-asset-buttons">
-          <PrimaryButton text="Add Asset" onClick={handleAdd} />
-          <CancelButton text="Cancel" onClick={handleCancel} />
-        </div>
+      <div className="add-asset-buttons">
+        <PrimaryButton text="Add Asset" onClick={handleAdd} />
+        <CancelButton text="Cancel" onClick={handleCancel} />
       </div>
     </div>
-  );
+  </div>
+);
 };
 
 export default AddAssetPage;

@@ -19,7 +19,7 @@ const AssetActionButtons = ({ onSell, onAdd, onHistory }) => {
         className="btn-filled"
         onClick={() => setTimeout(onAdd, 200)}  // ⏱️ Delay de 100ms
       >
-        Add Asset To Portfolio
+        Add Asset
       </button>
       <button
         className="btn-filled"

@@ -15,8 +15,11 @@ const AssetInfoCard = ({ quantity, purchasePrice, currentPrice }) => {
 
   return (
     <div className="asset-info-card">
-      <h3 className="section-title">Asset Details</h3>
-
+      <h3 className="section-title asset-info-title">
+        Asset Details
+        <span className="asset-info-icon">📊</span>
+      </h3>
+      <hr className="asset-info-divider" />
       <div className="info-row">
         <span className="label muted">Quantity</span>
         <span className="value">{quantity}</span>

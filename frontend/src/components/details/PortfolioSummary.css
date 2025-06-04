@@ -49,7 +49,10 @@
 
 /* === Cambio porcentaje === */
 .conteiner-change {
-  margin-top: 0.2rem;
+  margin-top: 0.4rem;
+  display: flex;
+  justify-content: flex-start;
+  
 }
 
 .change {
@@ -59,6 +62,8 @@
   border-radius: 999px;
   display: inline-block;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  min-width: 70px;
+  text-align: center;
 }
 
 .change.positive {
