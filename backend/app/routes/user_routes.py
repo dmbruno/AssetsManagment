@@ -11,6 +11,8 @@ from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
 SECRET_KEY = os.getenv("SECRET_KEY")
 
+user_routes = Blueprint('user_routes', __name__)
+
 # Decorador para proteger rutas con JWT
 def token_required(f):
     @wraps(f)
@@ -33,7 +35,6 @@ def token_required(f):
         return f(*args, **kwargs)
     return decorated
 
-user_routes = Blueprint('user_routes', __name__)
 
 @user_routes.route('/usuarios', methods=['GET', 'OPTIONS'])
 @token_required
