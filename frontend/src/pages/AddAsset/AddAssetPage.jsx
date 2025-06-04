@@ -9,6 +9,7 @@ import PageTopBar from "../../components/layout/PageTopBar";
 import { loadAssets } from "../../features/assets/assetsSlice";
 import { loadTransactions } from "../../features/transactions/transactionsSlice";
 import "./AddAssetPage.css";
+import { authFetch } from '../../app/api';
 
 const AddAssetPage = () => {
   const [formValues, setFormValues] = useState({

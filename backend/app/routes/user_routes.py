@@ -36,6 +36,8 @@ def token_required(f):
     return decorated
 
 
+
+
 @user_routes.route('/usuarios', methods=['GET', 'OPTIONS'])
 @token_required
 def get_usuarios():
@@ -43,6 +45,8 @@ def get_usuarios():
         return '', 200
     usuarios = User.query.all()
     return jsonify([u.serialize() for u in usuarios])
+
+
 
 @user_routes.route('/usuarios/<int:id>', methods=['GET', 'OPTIONS'])
 @token_required
@@ -106,6 +110,9 @@ def create_usuario():
     db.session.add(nuevo)
     db.session.commit()
     return jsonify(nuevo.serialize()), 201
+
+
+    
 
 @user_routes.route('/usuarios/<int:id>', methods=['PUT', 'OPTIONS'])
 @token_required
