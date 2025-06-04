@@ -14,7 +14,8 @@ const UserListPage = () => {
     const fetchData = async () => {
       try {
         const response = await authFetch(`/usuarios`);
-        setUsuarios(response.data);
+        const data = await response.json();
+        setUsuarios(data);
       } catch (error) {
         console.error('Error fetching usuarios:', error);
       }
@@ -24,7 +25,7 @@ const UserListPage = () => {
   }, []);
 
   const handleEdit = (id) => {
-    navigate(`/register/${id}`); 
+    navigate(`/register/${id}`);
   };
 
   const handleDelete = async (id) => {

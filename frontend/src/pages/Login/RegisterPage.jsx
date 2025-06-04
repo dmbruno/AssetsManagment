@@ -75,7 +75,7 @@ const RegisterPage = () => {
     <div className="register-container">
       <PageTopBar title={id ? 'Edit User' : 'User Register'} />
       <div className="register-content">
-        <h1 className="register-title">{id ? 'Editar Usuario' : 'Registrar Usuario'}</h1>
+        <h1 className="register-title">{id ? 'Editar Usuario' : 'Registro de Usuario'}</h1>
         <form onSubmit={handleSubmit} className="register-form">
           <input name="nombre" placeholder="Nombre" value={formValues.nombre} onChange={handleChange} required />
           <input name="apellido" placeholder="Apellido" value={formValues.apellido} onChange={handleChange} required />
@@ -84,15 +84,17 @@ const RegisterPage = () => {
           <input name="password" type="password" placeholder="Contraseña" value={formValues.password} onChange={handleChange} required />
           {error && <p className="error">{error}</p>}
           {success && <p className="success">Usuario {id ? 'actualizado' : 'registrado'} correctamente</p>}
-          <button type="submit">{id ? 'Actualizar' : 'Registrar'}</button>
+        </form>
+        <div className="register-action-buttons">
+          <button type="submit" form="register-form" className="register-btn">{id ? 'Actualizar' : 'Registrar'}</button>
           <button
             className="register-view-users-btn"
             type="button"
             onClick={() => navigate('/usuarios')}
           >
-            Ver Usuarios Existentes
+            Ver Usuarios
           </button>
-        </form>
+        </div>
       </div>
     </div>
   );
