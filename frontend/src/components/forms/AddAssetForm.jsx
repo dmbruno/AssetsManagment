@@ -7,8 +7,8 @@ const AddAssetForm = ({ values, onChange, showTypeSelect = false , disableIdenti
   const disableSymbol = !!values.symbol && values.symbol.trim().length > 0;
 
   return (
-    <form className="add-asset-form">
-      <h2>Basic Information</h2>
+    <form className="addAssetForm">
+      <h2 className="titulo">Basic Information</h2>
 
       <label>
         Name

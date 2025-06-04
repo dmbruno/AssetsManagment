@@ -1,97 +1,63 @@
-/* AddAssetForm.css */
-
-.add-asset-form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    
-    margin-bottom: 20px;
-    
-  }
-  
-  .add-asset-form h2 {
-    font-size: 1rem;
-    margin-bottom: 24px;
-  }
-  
-  .add-asset-form label {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 8px;
-    font-size: 0.95rem;
-  }
-  
-  .add-asset-form input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 16px;
-    border: none;
-    border-radius: 10px;
-    background-color: #f0eeee;
-    font-size: 0.95rem;
-    color: #444;
-  }
-  
-  .add-asset-form input::placeholder {
-    color: #aaa;
-  }
-  
-  .add-asset-form input[type="date"] {
-    color: #444;
-  }
-
-  /* Estilo base del select */
-.add-asset-form select {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  font-size: 15px;
-  color: #333;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='14' height='10' viewBox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23333' d='M7 10L0 0h14z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 12px 8px;
+.addAssetForm {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  margin: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Hover + focus */
-.add-asset-form select:hover,
-.add-asset-form select:focus {
-  border-color: #888;
-  outline: none;
+/* Título */
+.addAssetForm .titulo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #111827;
 }
 
-/* Estilo base */
-.select-type {
+/* Labels */
+.addAssetForm label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #374151;
+  
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.addAssetForm input{
+  margin-top: 10px;
+
+}
+
+/* Inputs y select */
+.addAssetForm input,
+.addAssetForm select {
   width: 100%;
-  padding: 12px;
+  padding: 0.5rem 0.5rem;
+  font-size: 0.8rem;
   border-radius: 8px;
-  margin-top: 8px;
   border: none;
-  font-size: 15px;
-  color: white;
-  appearance: none;
-  -webkit-appearance: none;
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 12px 8px;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='14' height='10' viewBox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M7 10L0 0h14z'/%3E%3C/svg%3E");
+  background-color: #f3f4f6;
+  color: #111827;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+  margin-bottom: 0.5rem;
 }
 
-/* Colores específicos */
+.addAssetForm input::placeholder {
+  color: #9ca3af;
+}
+
+/* Lateral tipo (opcional) */
 .select-type.stock {
-  background-color: #3b83f63b; /* Azul */
+  border-left: 5px solid #3b82f6;
 }
-
 .select-type.crypto {
-  background-color: #a955f72f; /* Violeta */
+  border-left: 5px solid #8b5cf6;
 }
-
 .select-type.bond {
-  background-color: #22c55e3f; /* Verde */
+  border-left: 5px solid #10b981;
 }

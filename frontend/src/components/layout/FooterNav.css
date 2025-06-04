@@ -3,7 +3,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 58px;
+  height: 45px;
   background: rgba(255, 255, 255, 0.85);
   border-top: 1px solid #e5e7eb;
   backdrop-filter: blur(8px);
@@ -33,6 +33,7 @@
 .nav-item svg {
   font-size: 1.2rem;
   margin-bottom: 2px;
+  margin-top: 5px;
   color: inherit;
   transition: transform 0.2s ease;
 }

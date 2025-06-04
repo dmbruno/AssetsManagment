@@ -20,6 +20,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
+  padding: .5rem;
 }
 
 .portfolio-user-info h2 {
@@ -37,7 +38,7 @@
 
 .portfolio-actions {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .portfolio-actions button {
@@ -46,6 +47,7 @@
   cursor: pointer;
   color: #374151;
   transition: color 0.2s ease;
+  
 }
 
 .portfolio-actions button:hover {
@@ -163,5 +165,5 @@
   font-size: 0.7rem;
   padding: 0.2rem 0.6rem;
   border-radius: 999px;
-  float: right;
+  
 }

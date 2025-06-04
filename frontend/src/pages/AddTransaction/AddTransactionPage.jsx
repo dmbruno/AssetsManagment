@@ -95,23 +95,26 @@ const AddTransactionPage = () => {
     };
 
     return (
-        <div className="add-transaction-page">
-            <div className="add-transaction-body">
-                <AssetTopBar symbol={formValues.symbol} />
-                <h1>Add Transaction</h1>
-                <AddAssetForm
-                    onChange={handleChange}
-                    values={formValues}
-                    showTypeSelect={false}
-                    disableIdentityFields={true}
-                />
-                <div className="add-transaction-buttons">
-                    <PrimaryButton text="Add Asset" onClick={handleAdd} />
-                    <CancelButton text="Cancel" onClick={handleCancel} />
-                </div>
-            </div>
-        </div>
-    );
+  <div className="add-transaction-page">
+    <AssetTopBar symbol={formValues.symbol} />
+
+    <div className="scrollable-content">
+      <h1>Add Transaction</h1>
+
+      <AddAssetForm
+        onChange={handleChange}
+        values={formValues}
+        showTypeSelect={false}
+        disableIdentityFields={true}
+      />
+
+      <div className="add-transaction-buttons">
+        <PrimaryButton text="Add Asset" onClick={handleAdd} />
+        <CancelButton text="Cancel" onClick={handleCancel} />
+      </div>
+    </div>
+  </div>
+);
 };
 
 export default AddTransactionPage;
