@@ -30,7 +30,7 @@ function App() {
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/register/:id" element={<RegisterPage />} />
       {/* Redirección condicional en la raíz (fuera del layout privado) */}
-      <Route path="/" element={<AuthRedirect />} />
+      <Route path="/" element={<Navigate to="/login" />} />
 
       {/* Rutas privadas: envueltas por DataLoader y MainLayout */}
       <Route element={<DataLoader />}>
