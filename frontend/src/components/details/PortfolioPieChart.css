@@ -1,0 +1,80 @@
+.portfolio-pie-chart {
+    width: 100%;
+    max-width: 240px;
+
+
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(30, 41, 59, 0.9);
+    padding: 1.2rem 0.5rem 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.portfolio-pie-chart.horizontal-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(229, 231, 235, 0.6);
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 1rem 0;
+    max-width: 340px;
+    min-height: 120px;
+    width: 91%;
+    gap: 3rem;
+    
+}
+
+.piechart-left {
+    flex: 0 0 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    margin-left: 10px;
+    width: 50%;
+    
+}
+
+.piechart-legend {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 60px;
+    background: none;
+    
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    line-height: 1.1;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 0.3rem;
+}
+
+.legend-label, .legend-percent {
+    font-size: 0.85rem;
+    word-break: keep-all;
+}
+
+
+

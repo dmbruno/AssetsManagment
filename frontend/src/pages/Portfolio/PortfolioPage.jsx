@@ -13,6 +13,8 @@ import PortfolioSummary from '../../components/details/PortfolioSummary';
 import AssetFilters from '../../components/details/AssetFilters';
 import AssetsList from '../../features/assets/AssetsList';
 
+import PortfolioPieChart from '../../components/details/PortfolioPieChart';
+
 import './PortfolioPage.css';
 
 const PortfolioPage = () => {
@@ -79,6 +81,10 @@ const PortfolioPage = () => {
           </header>
         )}
         <PortfolioSummary assets={filteredAssets} />
+        <section className="portfolio-piechart-section">
+          
+          <PortfolioPieChart assets={filteredAssets} />
+        </section>
         <AssetFilters
           searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}

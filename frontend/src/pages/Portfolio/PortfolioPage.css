@@ -30,6 +30,12 @@
   margin: 0;
 }
 
+.portfolio-piechart-section{
+  margin-top: 1rem;
+  
+  
+}
+
 .portfolio-user-info p {
   font-size: 0.75rem;
   color: #6b7280;
