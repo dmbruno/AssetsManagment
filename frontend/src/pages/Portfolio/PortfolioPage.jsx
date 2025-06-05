@@ -81,8 +81,9 @@ const PortfolioPage = () => {
           </header>
         )}
         <PortfolioSummary assets={filteredAssets} />
+      </div>
+      <div className="portfolio-scrollable-list">
         <section className="portfolio-piechart-section">
-          
           <PortfolioPieChart assets={filteredAssets} />
         </section>
         <AssetFilters
@@ -91,9 +92,6 @@ const PortfolioPage = () => {
           activeFilter={activeFilter}
           setActiveFilter={setActiveFilter}
         />
-      </div>
-
-      <div className="portfolio-scrollable-list">
         <AssetsList assets={filteredAssets} />
       </div>
     </div>
