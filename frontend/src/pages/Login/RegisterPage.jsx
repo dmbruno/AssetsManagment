@@ -61,13 +61,17 @@ const RegisterPage = () => {
         method,
         body: JSON.stringify(payload)
       });
-  
-      if (!response.ok) throw new Error("Error al guardar el usuario.");
-  
+      console.log('Respuesta del backend:', response);
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        console.error('Error al guardar usuario:', errorData);
+        throw new Error(errorData.error || "Error al guardar el usuario.");
+      }
       setSuccess(true);
       setTimeout(() => navigate('/usuarios'), 1000);
     } catch (err) {
       setError(err.message);
+      console.error('Error en handleSubmit:', err);
     }
   };
 
@@ -84,17 +88,17 @@ const RegisterPage = () => {
           <input name="password" type="password" placeholder="Contraseña" value={formValues.password} onChange={handleChange} required />
           {error && <p className="error">{error}</p>}
           {success && <p className="success">Usuario {id ? 'actualizado' : 'registrado'} correctamente</p>}
+          <div className="register-action-buttons">
+            <button type="submit" className="register-btn">{id ? 'Actualizar' : 'Registrar'}</button>
+            <button
+              className="register-view-users-btn"
+              type="button"
+              onClick={() => navigate('/usuarios')}
+            >
+              Ver Usuarios
+            </button>
+          </div>
         </form>
-        <div className="register-action-buttons">
-          <button type="submit" form="register-form" className="register-btn">{id ? 'Actualizar' : 'Registrar'}</button>
-          <button
-            className="register-view-users-btn"
-            type="button"
-            onClick={() => navigate('/usuarios')}
-          >
-            Ver Usuarios
-          </button>
-        </div>
       </div>
     </div>
   );
