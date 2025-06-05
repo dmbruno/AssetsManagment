@@ -7,6 +7,7 @@ import './LoginPage.css';
 
 import { loadAssets } from '../../features/assets/assetsSlice';
 import { loadTransactions } from '../../features/transactions/transactionsSlice';
+import { MdAccountBalanceWallet } from 'react-icons/md';
 
 const LoginPage = () => {
     const dispatch = useDispatch();
@@ -56,16 +57,23 @@ const LoginPage = () => {
 
     return (
         <div className="login-container">
-            <h1>Iniciar Sesión</h1>
+            <div className="login-logo">
+                <MdAccountBalanceWallet className="login-logo-icon" />
+                <span className="login-logo-text">Asset Manager</span>
+            </div>
             <form onSubmit={handleSubmit} className="login-form">
+                <label htmlFor="email">Email</label>
                 <input
+                    id="email"
                     type="email"
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                 />
+                <label htmlFor="password">Contraseña</label>
                 <input
+                    id="password"
                     type="password"
                     placeholder="Contraseña"
                     value={password}
@@ -73,7 +81,12 @@ const LoginPage = () => {
                     required
                 />
                 {error && <p className="error">{error}</p>}
-                <button type="submit">Entrar</button>
+                <button type="submit">Ingresar</button>
+                <div className="login-help">
+                    <p>
+                        ¿Necesitás ayuda para ingresar?
+                    </p>
+                </div>
             </form>
         </div>
     );
