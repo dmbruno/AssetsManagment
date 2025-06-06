@@ -4,7 +4,7 @@ import './PurchaseDetailsTable.css';
 
 const PurchaseDetailsTable = ({ transactions }) => (
   <div className="purchase-details-table">
-    <h3>Purchases and Sales Details</h3>
+    <h3>Purchases and sales details</h3>
     <h5 className="subtitle-purchases">All Transactions</h5>
     <table>
       <thead>
