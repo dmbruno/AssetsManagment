@@ -100,15 +100,7 @@ await fetch('http://localhost:5001/transacciones', {
 - [x] Vista histórica con todos los movimientos  
 - [x] Filtros por tipo, nombre y categoría  
 
----
 
-## ✅ Pendientes / ideas futuras
-
-- Autenticación de usuarios  
-- Integración con API de cotizaciones reales  
-- Exportación real a Google Sheets  
-
----
 
 
 
