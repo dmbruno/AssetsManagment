@@ -2,7 +2,7 @@
 .prevlogin-container {
   min-height: 100vh;
   width: 100vw;
-  background: linear-gradient(135deg, #2563eb 0%, #1e293b 100%);
+  background: linear-gradient(135deg, #212930 0%, #648fc5 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,8 +23,8 @@
   font-family: audiowide;
   font-size: 2.2rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-shadow: 0 2px 12px rgba(30,41,59,0.18);
+  
+  text-shadow: 0 2px 12px rgba(30,41,59,0.98);
 }
 
 .prevlogin-tap {
@@ -32,12 +32,12 @@
   font-size: 1.1rem;
   font-family: 'Inter', Arial, sans-serif;
   opacity: 0.8;
-  margin-top: 1.5rem;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.001em;
+  
 }
 
 .prevlogin-container:active {
-  background: linear-gradient(135deg, #1e293b 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #212930 0%, #648fc5 100%);
 }
 
 .prevlogin-container.fade-out {
