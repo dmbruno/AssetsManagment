@@ -7,7 +7,6 @@ import './LoginPage.css';
 
 import { loadAssets } from '../../features/assets/assetsSlice';
 import { loadTransactions } from '../../features/transactions/transactionsSlice';
-import { MdAccountBalanceWallet } from 'react-icons/md';
 
 const LoginPage = () => {
     const dispatch = useDispatch();
@@ -56,38 +55,38 @@ const LoginPage = () => {
     };
 
     return (
-        <div className="login-container">
-            <div className="login-logo">
-                <MdAccountBalanceWallet className="login-logo-icon" />
-                <span className="login-logo-text">Asset Manager</span>
+        <div className="login-container split-layout">
+            
+            <div className="login-image-section">
+                <h2 className='loginTitle'>Login To Your Account</h2>
             </div>
-            <form onSubmit={handleSubmit} className="login-form">
-                <label htmlFor="email">Email</label>
-                <input
-                    id="email"
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-                <label htmlFor="password">Contraseña</label>
-                <input
-                    id="password"
-                    type="password"
-                    placeholder="Contraseña"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                {error && <p className="error">{error}</p>}
-                <button type="submit">Ingresar</button>
-                <div className="login-help">
-                    <p>
-                        ¿Necesitás ayuda para ingresar?
-                    </p>
-                </div>
-            </form>
+            <div className="login-form-section">
+                <form onSubmit={handleSubmit} className="login-form">
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                    <input
+                        id="password"
+                        type="password"
+                        placeholder="Contraseña"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                    {error && <p className="error">{error}</p>}
+                    <button type="submit">Ingresar</button>
+                    <div className="login-help">
+                        <p>
+                            ¿Necesitás ayuda para ingresar?
+                        </p>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 };

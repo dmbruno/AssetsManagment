@@ -21,16 +21,18 @@ import RegisterPage from './pages/Login/RegisterPage'
 import UsersListPage from './pages/Users/UsersListPage'
 import PrivateRoute from './routes/PrivateRoute'
 import AuthRedirect from './routes/AuthRedirect'
+import PrevLogin from './pages/Login/PrevLogin'
 
 function App() {
   return (
     <Routes>
-      {/* Rutas públicas: NO envueltas por DataLoader ni MainLayout */}
+      {/* Pantalla splash minimalista */}
+      <Route path="/" element={<PrevLogin />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/register/:id" element={<RegisterPage />} />
       {/* Redirección condicional en la raíz (fuera del layout privado) */}
-      <Route path="/" element={<Navigate to="/login" />} />
+      {/* <Route path="/" element={<Navigate to="/login" />} /> */}
 
       {/* Rutas privadas: envueltas por DataLoader y MainLayout */}
       <Route element={<DataLoader />}>
